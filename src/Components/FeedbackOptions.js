@@ -1,0 +1,32 @@
+import React from "react";
+import PropTypes from "prop-types";
+import s from "./Feedback.module.css";
+
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
+  return (
+    <ul className={s.btnContainer}>
+      {options.map((el, idx) => (
+        <li key={idx.toString()}>
+          <button
+            id={el}
+            type="button"
+            name={el}
+            className={s.btn}
+            onClick={() => onLeaveFeedback(idx)}
+          >
+            {el}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+  optons: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
