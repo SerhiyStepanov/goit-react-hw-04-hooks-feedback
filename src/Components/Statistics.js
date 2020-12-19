@@ -13,19 +13,26 @@ export default function Statistics({
     <Fragment>
       <ul>
         <li>
-          <p className={s.text}>Good : {good}</p>
+          <p className={s.text}>
+            Good : <span style={{ color: "green" }}>{good}</span>
+          </p>
         </li>
         <li>
           <p className={s.text}>Neutral : {neutral}</p>
         </li>
         <li>
-          <p className={s.text}>Bad : {bad} </p>
+          <p className={s.text}>
+            Bad : <span style={{ color: "red" }}>{bad}</span>
+          </p>
         </li>
         <li>
           <p className={s.text}>Total : {total} </p>
         </li>
         <li>
-          <p className={s.text}>Positive feedback : {positivePercentage} %</p>
+          <p className={s.text}>
+            Positive feedback :{" "}
+            <span style={{ color: "green" }}>{positivePercentage}</span> %
+          </p>
         </li>
       </ul>
     </Fragment>
