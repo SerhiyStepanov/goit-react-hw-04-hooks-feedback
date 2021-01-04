@@ -27,6 +27,7 @@ export default function App() {
         break;
     }
   };
+
   const countTotalFeedback = () => {
     return good + neutral + bad;
   };
